@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Profile Picture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 flex items-center justify-center min-h-screen">
+    <div class="bg-zinc-800 text-white shadow-lg rounded-lg p-8 flex flex-col items-center">
+        <h3 class="text-2xl font-semibold mb-6 text-white">Upload Profile Picture</h3>
+        <form autocomplete="off" method="post" action="/upload" enctype="multipart/form-data" class="w-72 flex flex-col items-center">
+            <label class="block mb-4 w-full">
+                <span class="sr-only">Choose profile photo</span>
+                <input type="file" name="image" class="block w-full text-sm text-white
+                file:mr-4 file:py-2 file:px-4
+                file:rounded-full file:border-0
+                file:text-sm file:font-semibold
+                file:bg-blue-500 file:text-white
+                hover:file:bg-blue-600
+                cursor-pointer">
+            </label>
+            <input class="bg-blue-500 text-white rounded-full px-5 py-2 mt-4 cursor-pointer hover:bg-blue-600" type="submit" value="Upload Profile Picture">
+        </form>
+        <a href="/profile" class="mt-4 text-sm text-blue-500 hover:underline">Cancel</a>
+    </div>
+</body>
+</html>
